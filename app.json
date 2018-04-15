@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sned/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "开发中",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor":"#1D82FE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"./public/img/1.png",
+        "selectedIconPath":"./public/img/10.jpg"       
+      },
+      {
+        "pagePath": "pages/sned/index",
+        "text": "发布",
+        "iconPath": "./public/img/12.png",
+        "selectedIconPath": "./public/img/3.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "./public/img/6.png",
+        "selectedIconPath": "./public/img/8.jpg"
+      }     
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

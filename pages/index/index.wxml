@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="wxParse">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>
+<view class='body'>
+  <rich-text nodes="{{today}}" class='tui'></rich-text>
+  <view class='get_time'>{{get_time}}</view>
+  <view style='text-align: center'>
+    <image src='../../public/img/car.jpg' style='height:200rpx;border-radius:10rpx;'></image>
+  </view>
+  <view>
+    <text style='font-weight:500;font-size:larger'>{{header}}</text>
+  </view>
+  <view>
+    <text>{{content}}</text>
+  </view>
+  <view class='line'></view>
+  <view>
+    <text style='font-weight:500;font-size:larger;'>编辑推荐</text>
+  </view>
+  <view style='margin-bottom: 80rpx;'></view>
+  <view class="table">
+    <block wx:for="{{get_article}}" wx:key="{{code}}">
+      <view class="tr" wx:if="{{index % 2 == 0}}">
+        <view class="td" bindtap="article_info" data-id='{{item.article_id}}'>
+          <view class='header'>{{item.title}}</view>
+          <view>
+            {{item.content}}
+          </view>
+        </view>
+        <view class="td2">
+          <image src='{{item.img}}' class='img'></image>
+        </view>
+      </view>
+
+      <view class="tr" wx:else>
+        <view class="td" bindtap="article_info" data-id='{{item.article_id}}'>
+          <view class='header'>{{item.title}}</view>
+          <view>
+            {{item.content}}
+
+          </view>
+        </view>
+        <view class="td2">
+          <image src='{{item.img}}' class='img'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

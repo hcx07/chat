@@ -1,0 +1,81 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.body{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.line{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  height: 1rpx;
+  background:#888;
+}
+
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+  margin-bottom: 160rpx;
+}
+.td {
+    width:58%;
+    justify-content: center;
+    
+}
+.td2 {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60rpx;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.img{
+  height: 200rpx;
+  width: 280rpx;
+  border-radius:10rpx;
+}
+.header{
+  font-weight:500;
+  font-size:larger;
+  margin-bottom: 20rpx;
+}
+.get_time{
+  font-size: 20rpx;
+  margin-bottom: 30rpx;
+}
+.tui{
+  line-height: 60rpx;
+}
