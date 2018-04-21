@@ -3,12 +3,10 @@
 const app = getApp()
 var get_time;
 var get_article;
-var that = this;
-var WxParse = require('../../wxParse/wxParse.js');
 Page({
   data: {
     motto: 'Hello World',
-    header: '123',
+    header: '8888',
     content: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
     get_time: get_time,
     listData: get_article,
@@ -39,6 +37,13 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 获取文章详情
+  info: function (e) {
+    var articleId = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: 'info?articleId=' + articleId
+    })
+  },
   onLoad: function () {
     var that = this//不要漏了这句，很重要
     //获取服务器时间
@@ -65,6 +70,7 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
+        var article = res.data.data;
         that.setData({
           get_article: res.data.data
         })

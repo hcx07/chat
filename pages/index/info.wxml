@@ -1,0 +1,18 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='body'>
+  <view>
+    <text class='title'>{{info.title}}</text>
+  </view>
+  <view>
+    <text class='other'>{{info.other}}</text>
+  </view>
+  <view style='text-align: center'>
+    <image src='{{info.img}}' class='img'></image>
+  </view>
+  <view>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    <!-- <text>
+     {{info.content}} 
+    </text> -->
+  </view>
+</view>

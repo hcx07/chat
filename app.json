@@ -1,23 +1,25 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/index/info",
     "pages/logs/logs",
-    "pages/sned/index"
+    "pages/sned/index",
+    "pages/article/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "开发中",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "selectedColor":"#1D82FE",
+    "selectedColor": "#1D82FE",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"./public/img/1.png",
-        "selectedIconPath":"./public/img/10.jpg"       
+        "iconPath": "./public/img/1.png",
+        "selectedIconPath": "./public/img/10.jpg"
       },
       {
         "pagePath": "pages/sned/index",
@@ -30,7 +32,7 @@
         "text": "我的",
         "iconPath": "./public/img/6.png",
         "selectedIconPath": "./public/img/8.jpg"
-      }     
+      }
     ]
   },
   "networkTimeout": {

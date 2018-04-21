@@ -1,0 +1,19 @@
+/* pages/index/info.wxss */
+@import "../../wxParse/wxParse.wxss";
+.body {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.title{
+  font-weight:500;
+  font-size:larger;
+}
+.img {
+  margin: 20rpx 0rpx;
+  width: 100%;
+  border-radius: 10rpx;
+}
+.other{
+  font-size: 20rpx;
+  margin-bottom: 30rpx;
+}

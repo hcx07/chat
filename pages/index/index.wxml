@@ -22,25 +22,14 @@
   <view style='margin-bottom: 80rpx;'></view>
   <view class="table">
     <block wx:for="{{get_article}}" wx:key="{{code}}">
-      <view class="tr" wx:if="{{index % 2 == 0}}">
-        <view class="td" bindtap="article_info" data-id='{{item.article_id}}'>
+      <view class="tr">
+        <view class="td" bindtap="info" data-id='{{item.article_id}}'>
           <view class='header'>{{item.title}}</view>
+          <block wx:for="{{item.content}}">
           <view>
-            {{item.content}}
+            <text>{{item}}</text>
           </view>
-        </view>
-        <view class="td2">
-          <image src='{{item.img}}' class='img'></image>
-        </view>
-      </view>
-
-      <view class="tr" wx:else>
-        <view class="td" bindtap="article_info" data-id='{{item.article_id}}'>
-          <view class='header'>{{item.title}}</view>
-          <view>
-            {{item.content}}
-
-          </view>
+          </block>
         </view>
         <view class="td2">
           <image src='{{item.img}}' class='img'></image>
