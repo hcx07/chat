@@ -68,8 +68,9 @@
 }
 
 .img {
-  height: 200rpx;
-  width: 280rpx;
+  margin-top:10rpx; 
+  height: 160rpx;
+  width: 240rpx;
   border-radius: 10rpx;
 }
 
@@ -78,7 +79,14 @@
   font-size: larger;
   margin-bottom: 20rpx;
 }
-
+.title{
+  font-weight: 500;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.content{
+  font-size: 20rpx;
+}
 .get_time {
   font-size: 20rpx;
   margin-bottom: 30rpx;

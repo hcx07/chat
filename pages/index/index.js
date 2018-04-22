@@ -72,7 +72,7 @@ Page({
       success: function (res) {
         var article = res.data.data;
         that.setData({
-          get_article: res.data.data
+          get_article: article
         })
       }
     });

@@ -13,7 +13,7 @@
     <text style='font-weight:500;font-size:larger'>{{header}}</text>
   </view>
   <view>
-    <text>{{content}}</text>
+    <text class='content'>{{content}}</text>
   </view>
   <view class='line'></view>
   <view>
@@ -21,21 +21,20 @@
   </view>
   <view style='margin-bottom: 80rpx;'></view>
   <view class="table">
-    <block wx:for="{{get_article}}" wx:key="{{code}}">
+    <view wx:for="{{get_article}}" wx:key="{{code}}">
       <view class="tr">
         <view class="td" bindtap="info" data-id='{{item.article_id}}'>
-          <view class='header'>{{item.title}}</view>
-          <block wx:for="{{item.content}}">
-          <view>
-            <text>{{item}}</text>
+          <view class='title'>
+            <text>{{item.title}}</text>
           </view>
-          </block>
+          <view wx:for="{{item.content}}" wx:key="{{val}}">
+            <text class='content'>{{item}}</text>
+          </view>
         </view>
         <view class="td2">
           <image src='{{item.img}}' class='img'></image>
         </view>
       </view>
-    </block>
+    </view>
   </view>
-
 </view>
