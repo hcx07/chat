@@ -6,14 +6,16 @@
 <view class='body'>
   <rich-text nodes="{{today}}" class='tui'></rich-text>
   <view class='get_time'>{{get_time}}</view>
-  <view style='text-align: center'>
-    <image src='../../public/img/car.jpg' style='height:200rpx;border-radius:10rpx;'></image>
-  </view>
-  <view>
-    <text style='font-weight:500;font-size:larger'>{{header}}</text>
-  </view>
-  <view>
-    <text class='content'>{{content}}</text>
+  <view bindtap="info" data-id='{{top.article_id}}'>
+    <view style='text-align: center'>
+      <image src='{{top.img}}' style='height:300rpx;border-radius:10rpx;width: 100%;'></image>
+    </view>
+    <view>
+      <text style='font-weight:500;font-size:larger'>{{top.title}}</text>
+    </view>
+    <view>
+      <text class='content'>{{top.content}}</text>
+    </view>
   </view>
   <view class='line'></view>
   <view>

@@ -3,11 +3,11 @@
 const app = getApp()
 var get_time;
 var get_article;
+var top;
+var content;
 Page({
   data: {
-    motto: 'Hello World',
-    header: '8888',
-    content: '这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述这是描述',
+    top: top,
     get_time: get_time,
     listData: get_article,
     // listData: [
@@ -48,7 +48,20 @@ Page({
     var that = this//不要漏了这句，很重要
     //获取服务器时间
     wx.request({
-      url: 'https://chat.muniao.org/api/home/get_time',
+      url: 'https://chat.muniao.org/index/get-time',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        var time = res.data.data;
+        console.log(time);
+        that.setData({
+          get_time: time.time
+        })
+      }
+    });
+    wx.request({
+      url: 'https://chat.muniao.org/index/get-top',
       data: {
         date: 'time'
       },
@@ -57,12 +70,12 @@ Page({
       },
       success: function (res) {
         that.setData({
-          get_time: res.data.data
+          top: res.data.data
         })
       }
     });
     wx.request({
-      url: 'https://chat.muniao.org/api/home/get_article',
+      url: 'https://chat.muniao.org/index/get-article',
       data: {
         date: 'time'
       },

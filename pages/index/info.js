@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     var that = this//不要漏了这句，很重要
     wx.request({
-      url: 'https://chat.muniao.org/api/home/get_info?article_id=' + options.articleId,
+      url: 'https://chat.muniao.org/index/get-info?article_id=' + options.articleId,
       data: {
         date: 'time'
       },
