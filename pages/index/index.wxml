@@ -8,7 +8,7 @@
   <view class='get_time'>{{get_time}}</view>
   <view bindtap="info" data-id='{{top.article_id}}'>
     <view style='text-align: center'>
-      <image src='{{top.img}}' style='height:300rpx;border-radius:10rpx;width: 100%;'></image>
+      <image src='{{top.img}}'  class="info-img"></image>
     </view>
     <view>
       <text style='font-weight:500;font-size:larger'>{{top.title}}</text>
@@ -29,8 +29,8 @@
           <view class='title'>
             <text>{{item.title}}</text>
           </view>
-          <view wx:for="{{item.content}}" wx:key="{{val}}">
-            <text class='content'>{{item}}</text>
+          <view class='content'>
+            <text>{{item.content}}</text>
           </view>
         </view>
         <view class="td2">

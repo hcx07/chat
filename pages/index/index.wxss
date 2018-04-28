@@ -69,8 +69,8 @@
 
 .img {
   margin-top:10rpx; 
-  height: 160rpx;
-  width: 240rpx;
+  height: 200rpx;
+  width: 260rpx;
   border-radius: 10rpx;
 }
 
@@ -82,10 +82,11 @@
 .title{
   font-weight: 500;
   font-size: 30rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 20rpx; 
+  margin-top: 42rpx;
 }
 .content{
-  font-size: 20rpx;
+  font-size: 22rpx;
 }
 .get_time {
   font-size: 20rpx;
@@ -94,4 +95,11 @@
 
 .tui {
   line-height: 60rpx;
+}
+
+.info-img{
+  height:300rpx;
+  border-radius:10rpx;
+  width: 100%;
+  margin-bottom: 30rpx;
 }
