@@ -54,7 +54,6 @@ Page({
       },
       success: function (res) {
         var time = res.data.data;
-        console.log(time);
         that.setData({
           get_time: time.time
         })
